@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import profile from '../assets/profile.jpg';
+---
+
+<div class="container-profile">
+  <Image
+    src={profile}
+    alt="foto de perfil do mouro"
+    width={48}
+    height={48}
+    loading="eager"
+    class="profile-image"
+  />
+
+  <div class="info">
+    <p class="profile-name">mouro.dev</p>
+    <p>Desenvolvedor Front-end</p>
+  </div>
+</div>
+
+<style>
+  .container-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .profile-image {
+    border-radius: 50%;
+  }
+
+  .profile-name {
+    color: var(--text-main);
+    font-weight: 600;
+  }
+</style>
