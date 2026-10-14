@@ -1,3 +1,55 @@
----
+<section class="container-hero" aria-labelledby="hero-title">
+  <h1 id="hero-title" class="hero-title">
+    Construo interfaces onde o código limpo encontra o design empático.
+  </h1>
+  <p class="hero-description">
+    Aqui é o Mouro, desenvolvedor front-end do Rio de Janeiro focado em criar
+    experiências digitais que realmente importam. Dedico meu trabalho a garantir
+    que cada componente renderizado não seja apenas funcional, mas acessível e
+    centrado nas necessidades de quem o utiliza.
+  </p>
+  <a href="/sobre" class="hero-button">
+    Ler jornada completa
+    <span class="arrow" aria-hidden="true">
+      →
+    </span>
+  </a>
+</section>
 
----
+<style>
+  .container-hero {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-hero);
+    max-inline-size: 18.5ch;
+    text-wrap: wrap;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    max-inline-size: 60ch;
+  }
+
+  .hero-button {
+    color: var(--text-main);
+    inline-size: fit-content;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    color: var(--accent-primary);
+  }
+
+  .hero-button:hover .arrow {
+    transform: translateX(4px);
+  }
+</style>
