@@ -1,0 +1,93 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<section class="project-container" aria-labelledby="projects-title">
+  <div class="section-header">
+    <h2 class="project-title" id="projects-title ">
+      O que ando construindo
+    </h2>
+    <p class="project-description">
+      Uma seleção dos meus desafios mais recentes. Cada projeto aqui representa
+      uma oportunidade onde uni código limpo e design focado no usuário para
+      criar soluções reais.
+    </p>
+  </div>
+  <div class="cards">
+    <ProjectCard
+      title="Gerador de rotina de treinos"
+      description="Aplicação web focada em criar e gerenciar séries de exercícios personalizados."
+      githubUrl="/projetos"
+      liveUrl="/projetos"
+    />
+
+    <ProjectCard
+      title="Dashboard de Finaças Pessoais"
+      description="Interface interativa para controle de gastos mensais, visualização de metas financeiras e exportação de relatórios em tempo real com foco em acessibilidade."
+      githubUrl="/projetos"
+      liveUrl="/projetos"
+    />
+
+    <ProjectCard
+      title="Design System & UI Kit"
+      description="Biblioteca de componentes acessíveis construída do zero com tokens semânticos, suporte nativo a temas escuro e claro, navegação completa via teclado e documentação interativa."
+      liveUrl="/projetos"
+    />
+
+    <ProjectCard
+      title="CLI de Automação de Ambiente"
+      description="Ferramenta de linha de comando rápida para provisionar dotfiles, fontes e configurações de editores em segundos."
+      githubUrl="/projetos"
+      liveUrl="/projetos"
+    />
+  </div>
+  <a href="/projetos" class="projects-link">
+    Ver todos os projetos
+    <span class="arrow" aria-hidden="true">
+      →
+    </span>
+  </a>
+</section>
+<style>
+  .project-container {
+    display: grid;
+    gap: 2rem;
+  }
+  .section-header {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .project-title {
+    font-size: var(--font-size-h2);
+    letter-spacing: -0.02em;
+  }
+
+  .project-description {
+    max-inline-size: 60ch;
+    color: var(--text-muted);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1rem;
+  }
+
+  .projects-link {
+    color: var(--text-main);
+    inline-size: fit-content;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    color: var(--accent-primary);
+  }
+
+  .projects-link:hover .arrow {
+    transform: translateX(4px);
+  }
+</style>
